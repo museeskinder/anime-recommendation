@@ -3,6 +3,7 @@ import { AnimeView } from "../AnimeView/AnimeView";
 import s from './style.module.css';
 
 export const AnimeHome = ({ anime }) => {
+    console.log(anime);
     return (
         <div className={s.container}>
                 <AnimeView  className={s.view} anime={anime}/>
