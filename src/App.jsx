@@ -5,10 +5,9 @@ import { AnimeAPI } from "./api/anime";
 export const App = () => {
   const [randomAnime, setRandomAnime] = useState();
 
-  const getRandomAnime =  () => {
+  const getRandomAnime =  async () => {
     let randomNum = Math.floor(Math.random() * 10) + 1;
-    console.log(randomNum)
-    const anime = AnimeAPI.fetchAnime(randomNum);
+    const anime =  await AnimeAPI.fetchAnime(randomNum);
     setRandomAnime(anime);
   };
 
@@ -18,7 +17,7 @@ export const App = () => {
 
   return (
     <div>
-      <AnimeHome anime={randomAnime}/>
+      { randomAnime && <AnimeHome anime={randomAnime} /> }
       <AnimeTrending />
     </div>
   );
