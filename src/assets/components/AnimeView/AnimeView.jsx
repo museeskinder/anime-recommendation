@@ -1,6 +1,7 @@
 import s from './style.module.css'
 export const AnimeView = ({ anime }) => {
-    const coverImageUrl = anime.data.attributes.coverImage.large;
+    console.log(anime)
+    const coverImageUrl = anime?.data?.attributes?.coverImage?.large 
     return (
         <div style={{
             backgroundImage: `url(${coverImageUrl})`,
