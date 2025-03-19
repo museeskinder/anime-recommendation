@@ -1,7 +1,8 @@
+import s from './style.module.css'
 export const AnimeView = (props) => {
     return (
-        <>
-            Anime View
-        </>
+        <div className={s.container}>
+            <div></div>
+        </div>
     );
 };
