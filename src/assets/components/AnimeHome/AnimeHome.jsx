@@ -2,13 +2,11 @@ import { AnimeTrending } from "../AnimeTrending/AnimeTrending";
 import { AnimeView } from "../AnimeView/AnimeView";
 import s from './style.module.css';
 
-export const AnimeHome = (props) => {
+export const AnimeHome = ({ anime }) => {
     return (
         <div className={s.container}>
-            <div className={`row`}>
-                <AnimeView className={`col`} anime={props}/>
-                <AnimeTrending className={`col`} />
-            </div>
+                <AnimeView  className={s.view} anime={anime}/>
+                <AnimeTrending className={s.trending}/>
         </div>
     );
 };
