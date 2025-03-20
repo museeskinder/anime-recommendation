@@ -1,7 +1,9 @@
-export const AnimeTrending = (props) => {
+import s from './style.module.css';
+import { AnimeTrendingList } from '../AnimeTrendingList/AnimeTrendingList'
+export const AnimeTrending = ({animeList}) => {
     return (
-        <>
-            Anime Trending
-        </>
+        <div>
+            <AnimeTrendingList list={animeList}/>
+        </div>
     );
 }
