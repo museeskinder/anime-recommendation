@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { AnimeTrendingListItem } from "../AnimeTrendingListItem/AnimeTrendingListItem";
+import s from './style.module.css';
 export const AnimeTrendingList = ({ list }) => {
   const [animeList, setAnimeList] = useState([]);
 
@@ -11,7 +12,7 @@ export const AnimeTrendingList = ({ list }) => {
   }, []);
 
   return (
-    <div>
+    <div className={s.container}>
       {animeList.map((anime) => {
         const attributes = anime?.attributes;
         const { ageRating, ageRatingGuide } = attributes;
