@@ -1,6 +1,6 @@
 import s from './style.module.css'
+import { AnimeDetail }  from '../AnimeDetail/AnimeDetail';
 export const AnimeView = ({ anime }) => {
-    console.log(anime)
     const coverImageUrl = anime?.data?.attributes?.coverImage?.large 
     return (
         <div style={{
@@ -10,6 +10,7 @@ export const AnimeView = ({ anime }) => {
             backgroundRepeat: 'no-repeat',
             opacity: 0.5,
         }} className={s.container}>
+            <AnimeDetail anime={anime} />
         </div>
     );
 };
