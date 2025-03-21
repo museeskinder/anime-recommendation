@@ -1,5 +1,5 @@
-import { AnimeHome } from "./assets/components/AnimeHome/AnimeHome";
 import { AnimeTrending } from "./assets/components/AnimeTrending/AnimeTrending";
+import { AnimeView } from './assets/components/AnimeView/AnimeView';
 import { useEffect, useState } from "react";
 import { fetchAnime, fetchTrendingAnime } from '../src/api/anime';
 import  './global.css';
@@ -25,7 +25,7 @@ export const App = () => {
 
   return (
     <div>
-      { randomAnime && <AnimeHome anime={randomAnime} /> }
+      { randomAnime && <AnimeView anime={randomAnime} /> }
       { trendingAnimeList && <AnimeTrending animeList={trendingAnimeList} />}
     </div>
   );
